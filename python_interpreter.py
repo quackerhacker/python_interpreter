@@ -6,8 +6,9 @@ bytecode = {
         ("LOAD_VALUE", 2),
         ("ADD_TWO_VALUES", None),
         ("PRINT_ANSWER", None)],
-    "numbers": [7, 5, 8]
+    "numbers": [7, 10, 8]
 }
+
 class Interpreter:
     def __init__(self):
         self.stack = []
@@ -28,6 +29,7 @@ class Interpreter:
     def run_code(self, bytecode):
         instructions = bytecode["instructions"]
         numbers = bytecode["numbers"]
+
         for each_step in instructions:
             instruction, argument = each_step
 
